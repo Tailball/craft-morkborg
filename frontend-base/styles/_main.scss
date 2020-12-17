@@ -1,0 +1,185 @@
+body { 
+    background-color: $color-main;
+    font-family: $font-text;
+    font-weight: 400;
+    font-size: 62.5%;
+    letter-spacing: .8px;
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.section#section-main {
+    background-color: $color-main;
+    height: calc(100vh + 15vh);
+
+    img {
+        width: 55%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        animation-name: anim-main-swell;
+        animation-duration: 2500ms;
+        animation-delay: 400ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    .section-main-reward {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        top: 2.8rem;
+        opacity: 0;
+        transition: opacity 1000ms ease-in;
+
+        .section-main-reward--quote {
+            font-size: .7rem;
+            font-weight: 700;
+            font-style: italic;
+            margin-bottom: .3rem;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+
+.section#section-tagline {
+    height: 120vh;
+    background-color: $color-text;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-family: $font-heading;
+        text-transform: uppercase;
+        color: $color-main;
+        font-size: 6.2rem;
+        line-height: 6rem;
+        padding-top: 10rem;
+        letter-spacing: 4px;
+    }
+}
+
+.section#section-rewards {
+    background-color: $color-main;
+    padding: 4rem 1.5rem;
+    
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-family: $font-heading;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2.5rem;
+
+        li {
+            width: 23%;
+            text-align: center;
+            transition: transform 300ms ease-in;
+            cursor: pointer;
+
+            h2 {
+                font-family: $font-important-title;
+                font-size: 1.2rem;
+            }
+
+            svg {
+                width: 90px;
+                height: 90px;
+            }
+
+            &:hover { 
+                transform: scale(1.2);
+            }
+
+            &:last-child svg {
+                transform: rotate(-40deg);
+            }
+        }
+    }
+}
+
+.section.section-sm {
+    height: initial;
+}
+
+
+@media screen and (min-width: 1100px) {
+    .section#section-main {
+        img {
+            width: 40%;
+        }
+    }
+
+    .section#section-tagline {
+        h1 {
+            font-size: 7.5rem;
+            line-height: 7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .section#section-tagline {
+        h1 {
+            font-size: 9rem;
+            line-height: 8.5rem;
+        }
+    }
+
+    .section#section-rewards {
+        h1 {
+            font-size: 4rem;
+        }
+
+        ul {
+            width: 80%;
+            margin: 4rem auto 2rem;
+
+            li {
+                svg {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .section#section-tagline {
+        h1 {
+            font-size: 5.5rem;
+            line-height: 5.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .section#section-tagline {
+        h1 {
+            font-size: 4.5rem;
+            line-height: 5rem;
+        }
+    }
+}

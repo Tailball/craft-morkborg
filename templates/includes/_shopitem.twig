@@ -1,0 +1,12 @@
+<div class="section-shop-items--container--item">
+    <div class="section-shop-items--container--item--description">
+        <h2>{{ currentItem.itemTitle }}</h2>
+        <p>{{ currentItem.itemDescription }}</p>
+        <button>Download pdf</button>
+    </div>
+    <div class="section-shop-items--container--item--image">
+
+        {% set imgUrl = currentItem.itemImage.one().getUrl() %}
+        <img src="{{ imgUrl }}" alt="{{ currentItem.itemTitle }}">
+    </div>
+</div>

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: f301df04-889d-4004-966e-27c6b5fe527a
+handle: matrixShopItem
+instructions: ''
+name: 'Matrix Shop Item'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_matrixshopitem}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

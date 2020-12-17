@@ -1,0 +1,31 @@
+{% extends './includes/_layout' %}
+
+{% block content %}
+    {%set headerUrl = entry.headerImage.one().getUrl() %}
+    <section class="shop-section" id="section-shop--header" 
+             style="background-image: url('{{ headerUrl }}');">
+    </section>
+
+
+    <section class="shop-section" id="section-shop--title">
+        <h1>{{ entry.shopTitle }}</h1>
+        <h2>{{ entry.shopSubtitle }}</h2>
+        <p>{{ entry.shopDescription }}</p>
+    </section>
+
+
+    <section class="shop-section" id="section-shop--items">
+
+        <h1>{{ entry.shopContentTitle  }}</h1>
+        
+        <div class="section-shop--items--container">
+
+            {% set shopItems = entry.matrixShopItem.all() %}
+            {% for shopItem in shopItems %}
+                {{ include('./includes/_shopitem', { currentItem: shopItem }) }}
+            {% endfor %}
+
+        </div>
+
+    </section>
+{% endblock %}

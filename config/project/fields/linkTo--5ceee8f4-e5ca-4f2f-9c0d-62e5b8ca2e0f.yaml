@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: e4d1a852-2b7c-4c34-ab2b-1b2195f090a2
+handle: linkTo
+instructions: ''
+name: 'Link To'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources:
+    - singles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

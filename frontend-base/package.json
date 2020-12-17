@@ -1,0 +1,22 @@
+{
+  "name": "frontend-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf dist-assets && rm -rf dist-html && rm -rf .cache",
+    "start": "npm run-script clean && parcel index.html",
+    "build-html": "parcel build index.html --public-url ./ --no-minify --out-dir dist-html",
+    "build-assets": "parcel build index.html --public-url ./ --out-dir dist-assets",
+    "build": "npm run-script clean && npm run-script build-html && npm run-script build-assets",
+    "backupdb": "/applications/mamp/library/bin/mysqldump -uroot -proot craftmorkborg > ~/db-dump.sql",
+    "restoredb": "/applications/mamp/library/bin/mysql -uroot -proot craftmorkborg < ~/db-dump.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.30.0"
+  }
+}

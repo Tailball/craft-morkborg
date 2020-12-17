@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: f301df04-889d-4004-966e-27c6b5fe527a
+handle: shopTitle
+instructions: ''
+name: 'Shop Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

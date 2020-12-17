@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Metal+Mania&display=swap");
+@keyframes anim-main-swell {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:active {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+body {
+  background-color: #FEE903;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  letter-spacing: 0.8px;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.section#section-main {
+  background-color: #FEE903;
+  height: calc(100vh + 15vh);
+}
+.section#section-main img {
+  width: 55%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: anim-main-swell;
+  animation-duration: 2500ms;
+  animation-delay: 400ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.section#section-main .section-main-reward {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 2.8rem;
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+.section#section-main .section-main-reward .section-main-reward--quote {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+.section#section-main .section-main-reward.active {
+  opacity: 1;
+}
+
+.section#section-tagline {
+  height: 120vh;
+  background-color: #000;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section#section-tagline h1 {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  color: #FEE903;
+  font-size: 6.2rem;
+  line-height: 6rem;
+  padding-top: 10rem;
+  letter-spacing: 4px;
+}
+
+.section#section-rewards {
+  background-color: #FEE903;
+  padding: 4rem 1.5rem;
+}
+.section#section-rewards h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.section#section-rewards ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.section#section-rewards ul li {
+  width: 23%;
+  text-align: center;
+  transition: transform 300ms ease-in;
+  cursor: pointer;
+}
+.section#section-rewards ul li h2 {
+  font-family: "Metal Mania", cursive;
+  font-size: 1.2rem;
+}
+.section#section-rewards ul li svg {
+  width: 90px;
+  height: 90px;
+}
+.section#section-rewards ul li:hover {
+  transform: scale(1.2);
+}
+.section#section-rewards ul li:last-child svg {
+  transform: rotate(-40deg);
+}
+
+.section.section-sm {
+  height: initial;
+}
+
+@media screen and (min-width: 1100px) {
+  .section#section-main img {
+    width: 40%;
+  }
+
+  .section#section-tagline h1 {
+    font-size: 7.5rem;
+    line-height: 7rem;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .section#section-tagline h1 {
+    font-size: 9rem;
+    line-height: 8.5rem;
+  }
+
+  .section#section-rewards h1 {
+    font-size: 4rem;
+  }
+  .section#section-rewards ul {
+    width: 80%;
+    margin: 4rem auto 2rem;
+  }
+  .section#section-rewards ul li svg {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .section#section-tagline h1 {
+    font-size: 5.5rem;
+    line-height: 5.4rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .section#section-tagline h1 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+}
+.shop-section {
+  width: 100%;
+  overflow-x: hidden;
+}
+.shop-section#section-shop--header {
+  height: 60vh;
+  background-position: center center;
+  background-size: cover;
+}
+.shop-section#section-shop--title {
+  background-color: #fff;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  padding: 6rem;
+}
+.shop-section#section-shop--title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.shop-section#section-shop--title h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-top: 0.4rem;
+  line-height: 1.8rem;
+}
+.shop-section#section-shop--title p {
+  text-align: left;
+  padding-top: 2rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+.shop-section#section-shop--items {
+  background-color: #eaeaea;
+}
+.shop-section#section-shop--items h1 {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.45rem;
+  padding: 1rem 0;
+  letter-spacing: 14px;
+  border-bottom: 1px solid black;
+}
+.shop-section#section-shop--items .section-shop-items--container--item {
+  padding: 2rem 2rem;
+  margin: 0 2.5rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--description {
+  width: 30%;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--description h2 {
+  margin-bottom: 0.5rem;
+  font-family: "Metal Mania", cursive;
+  font-size: 1.5rem;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--description p {
+  margin-bottom: 1rem;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--description button {
+  border: 1px solid black;
+  background-color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.6rem;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--description button:hover {
+  background-color: #ff40b4;
+  border-color: #ff40b4;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--image {
+  padding-left: 3rem;
+  width: 70%;
+  cursor: pointer;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--image img {
+  width: 100%;
+  transition: transform 200ms ease-out;
+}
+.shop-section#section-shop--items .section-shop-items--container--item--image img:hover {
+  transform: scale(1.1);
+}
+.shop-section#section-shop--items .section-shop-items--container--item:last-child {
+  border: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .shop-section#section-shop--header {
+    height: 75vh;
+  }
+
+  .shop-section#section-shop--title {
+    padding: 9rem 12rem;
+  }
+  .shop-section#section-shop--title h2 {
+    padding-top: 0.6rem;
+  }
+  .shop-section#section-shop--title p {
+    padding-top: 4rem;
+  }
+
+  .shop-section#section-shop--items {
+    background-color: #eaeaea;
+  }
+  .shop-section#section-shop--items h1 {
+    text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.45rem;
+    padding: 1rem 0;
+    letter-spacing: 14px;
+    border-bottom: 1px solid black;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item {
+    margin: 0 7rem;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--description {
+    width: 45%;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--description h2 {
+    margin-bottom: 0.7rem;
+    font-size: 1.6rem;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--description p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--description button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--image {
+    padding-left: 6rem;
+    width: 55%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .shop-section#section-shop--header {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .shop-section#section-shop--title {
+    padding: 2.65rem;
+  }
+
+  .shop-section#section-shop--items h1 {
+    font-size: 1.1rem;
+    letter-spacing: 12px;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item {
+    padding: 2rem 1rem;
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--description {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--description button {
+    margin-top: 0.5rem;
+  }
+  .shop-section#section-shop--items .section-shop-items--container--item--image {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=imports.a323326a.css.map */

@@ -1,0 +1,32 @@
+{% extends './includes/_layout' %}
+
+{% block content %}
+    <div class="section" id="section-main">
+        {% set link = entry.linkTo.one() %}
+        <a href="{{ link }}">
+            <img src="{{ entry.mainImage.one().getUrl() }}" alt="Mork Borg Logo" id="logo">
+        </a>
+        
+        {% set quotes = entry.matrixQuotes.all() %}
+        {% for quote in quotes %}
+            {{ include('./includes/_quote', { quote: quote }) }}
+        {% endfor %}
+    </div>
+
+    <div class="section" id="section-tagline">
+        <h1>
+            {{ entry.headerText }}
+        </h1>
+    </div>
+
+    <div class="section section-sm" id="section-rewards">
+        <h1>four ennies</h1>
+
+        <ul>
+            {% set rewards = entry.matrixRewards.all() %}
+            {% for reward in rewards %}
+                {{ include('./includes/_reward', { reward: reward }) }}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

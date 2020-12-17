@@ -1,0 +1,124 @@
+field: 36bb3abc-338d-4e94-8516-0aaf9a3b45a4
+fieldLayouts:
+  a2879fb3-ff97-4ee4-980f-6265c74f75b1:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 9c211903-dc95-46f5-8acc-36859e85d1de
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cbe5da37-1cdc-4c69-8d25-e7706c033fc3
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2b06f126-8cc9-40f5-b071-3db5408bfbe3
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0ee6a5c7-7ad4-4805-809f-1327d00af700
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0ee6a5c7-7ad4-4805-809f-1327d00af700:
+    contentColumnType: text
+    fieldGroup: null
+    handle: svgViewbox
+    instructions: ''
+    name: 'SVG Viewbox'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  2b06f126-8cc9-40f5-b071-3db5408bfbe3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: svg
+    instructions: ''
+    name: SVG
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  9c211903-dc95-46f5-8acc-36859e85d1de:
+    contentColumnType: text
+    fieldGroup: null
+    handle: rewardTitle
+    instructions: ''
+    name: 'Reward Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbe5da37-1cdc-4c69-8d25-e7706c033fc3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: rewardResult
+    instructions: ''
+    name: 'Reward Result'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: reward
+name: Reward
+sortOrder: 1

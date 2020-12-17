@@ -1,0 +1,12 @@
+<li>
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         viewBox="{{ reward.svgViewbox }}" 
+         preserveAspectRatio="xMidYMid meet">
+        
+        <g>{{ reward.svg|raw }}</g>
+
+    </svg>
+    
+    <h2>{{ reward.rewardTitle }}</h2>
+    <p>{{ reward.rewardResult }}</p>
+</li>

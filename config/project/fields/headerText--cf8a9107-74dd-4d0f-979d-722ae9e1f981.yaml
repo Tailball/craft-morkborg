@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: e4d1a852-2b7c-4c34-ab2b-1b2195f090a2
+handle: headerText
+instructions: 'You can just type in lowercase.'
+name: 'Header Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
